@@ -1,0 +1,164 @@
+body {
+    padding: 0;
+}
+
+/* Container pour la page */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.selection-form {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante sur les petits écrans */
+}
+
+.selection-form label {
+    margin-right: 10px; /* Espacement entre les labels et les sélecteurs */
+}
+
+.selection-form select {
+    padding: 5px;
+    margin-right: 10px; /* Espacement entre les sélecteurs */
+}
+
+/* Réponse sur petits écrans */
+@media (max-width: 768px) {
+    .selection-form {
+        flex-direction: column; /* Les éléments du formulaire passent à la colonne sur les petits écrans */
+        align-items: stretch; /* Les éléments du formulaire s'étendent pour remplir la largeur */
+    }
+
+    .selection-form label,
+    .selection-form select,
+    .selection-form button {
+        margin-bottom: 10px; /* Ajoutez de l'espace entre les éléments empilés */
+        margin-right: 0; /* Enlève l'espace à droite puisque tout est empilé */
+    }
+
+    .selection-form button {
+        width: 100%; /* Le bouton s'étend pour remplir la largeur sur les petits écrans */
+    }
+}
+/* Calendar table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* Calendar header */
+table th {
+    background-color:  #000000;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 20px;
+    width: 14%;
+}
+
+.jour {
+    background-color: rgb(200, 200, 202); 
+    color: black;
+    padding: 10px;
+    text-align: center;
+    font-size: 16;
+    border: 1px solid #ddd;
+}
+
+table td {
+    width: 14%; /* Diviser équitablement la largeur entre 7 jours de la semaine */
+    height: 100px; /* Hauteur fixe pour chaque cellule */
+    vertical-align: top;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    overflow: hidden; /* Cache le contenu débordant */
+}
+
+/* Date cell */
+.date-cell {
+    width: 14%; /* Diviser 100% par le nombre de colonnes (7 si une semaine) */
+    height: 100px; /* Exemple de hauteur fixe */
+    overflow: hidden; /* Masquer le contenu qui dépasse */
+    text-overflow: ellipsis; /* Ajouter des points de suspension si le texte est trop long */
+}
+table {
+    border-collapse: collapse;
+}
+.date-cell {
+    border: 1px solid #ddd; /* Couleur de bordure grise claire */
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* List of events in a date cell */
+.date-cell ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    font-size: 14px;
+}
+
+.date-cell ul li {
+    background: #e9e9e9;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+
+/* Liste des événements dans une cellule de date */
+.date-cell .event-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    color: #000000;
+}
+
+/* Élément individuel de l'événement */
+.date-cell .event-item {
+    font-size: 12px; /* Taille de police plus petite */
+    background: #e9e9e9; 
+    margin-bottom: 5px;
+    padding: 3px;
+    border-radius: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Empêche le texte de passer à la ligne suivante */
+    color: #000000;
+}
+
+[data-bs-theme="light"] .btn-outline-warning{
+    color: rgb(0, 0, 0);
+    border-color: rgb(255, 191, 0);
+    background-color: rgb(232, 181, 70);
+}
+
+/* Styles par défaut pour les écrans très petits: n'afficher que l'heure */
+.heure-rdv {
+    display: block; 
+}
+.libelle-motif, .details-client {
+    display: none; /* caché sur les petits écrans */
+}
+
+/* Afficher l'heure et le libellé du motif sur les tablettes et petits écrans */
+@media (min-width: 600px) {
+    .libelle-motif {
+        display: block;
+    }
+}
+
+/* Afficher tous les détails sur les grands écrans */
+@media (min-width: 1024px) {
+    .libelle-motif, .details-client {
+        display: block; /* maintenant visible */
+    }
+}

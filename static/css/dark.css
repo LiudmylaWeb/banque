@@ -1,0 +1,10 @@
+[data-bs-theme="dark"]
+    input[readonly] {
+        background-color: #4a4a4a;
+        background-image: url('../images/readonly.png');
+        background-size: 15px;
+        background-position: right 15px center;
+        background-repeat: no-repeat;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }

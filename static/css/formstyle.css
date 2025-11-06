@@ -1,0 +1,60 @@
+body{
+    background-color: #b0b0b0;
+}
+legend{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: underline;
+    text-decoration-color: #ac9750;
+
+}
+
+/* label */
+label{
+    font-weight: bold;
+}
+
+/* input */
+[data-bs-theme="light"] input[readonly] {
+    background-color: #b0b0b0;
+    background-image: url('../images/readonly.png');
+    background-size: 15px;
+    background-position: right 15px center;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* select */
+.part {
+    color: #a07400;
+}
+
+
+.container{
+    justify-content: center;
+}
+
+
+.custom-dropdown .dropdown-menu {
+    background-color: white; /* Couleur de fond blanche */
+}
+
+[data-bs-theme="light"] .btn-outline-warning{
+    color: rgb(0, 0, 0);
+    border-color: rgb(255, 191, 0);
+    background-color: rgb(232, 181, 70);
+
+}
+
+[data-bs-theme="light"] body{
+    background-color: rgba(207, 208, 209, 0.733);
+
+}
+
+[data-bs-theme="light"] .container{
+    background-color: rgba(247, 244, 244, 0.963);
+
+
+}
