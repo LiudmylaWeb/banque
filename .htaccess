@@ -1,0 +1,16 @@
+RewriteEngine On
+Options +FollowSymLinks +MultiViews
+DirectoryIndex index.php
+
+# Redirige la racine vers index.php avec une redirection 301
+RewriteRule ^$ /index.php [R=301,L]
+
+# Ignore la réécriture pour index.php
+RewriteRule ^index\.php$ - [L]
+
+# Redirige tout ce qui est dans /static vers le dossier static
+RewriteCond %{REQUEST_URI} !^/static/
+
+# Redirige tout le reste vers le dossier pages
+RewriteCond %{REQUEST_URI} !^/pages/
+RewriteRule ^(.*)$ /pages/$1 [L]
